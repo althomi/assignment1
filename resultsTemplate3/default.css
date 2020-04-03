@@ -570,5 +570,8 @@ ul.style3 .first {
 		text-align: center;
 		color: rgba(255,255,255,1);
 	}
-	
-
+ #canvasNextEmployee{
+	 position: absolute;
+	 top: 200px;
+	 left: 250px;
+ }
