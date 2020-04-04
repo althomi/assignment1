@@ -70,6 +70,46 @@ function animate3() {
 animate3();
 
 
+/*3 Manipulation with AJAX: fetching data from server*/
+    var ajax = new XMLHttpRequest();
+    ajax.open('GET', 'https://github.com/LearnWebCode/json-example/blob/master/animals-1.json');
+    ajax.onload = function(){
+        console.log(ajax.responseText);
+    };
+    ajax.send()
+
+
+/*4 Manipulation with AJAX: printing data to the web page from other server*/
+
+var ajayxOutput = document.getElementById("ajax");
+var ajaxButton = document.getElementById("button4");
+ajaxButton.addEventListener("click", function httprequest() {
+    ajax.open('GET', 'https://github.com/LearnWebCode/json-example/blob/master/animals-1.json');
+    ajax.onload = function(){
+        var mydata = JSON.parse(ajax.responseText);
+        createHTML(mydata)
+    };
+    ajax.send();
+});
+
+
+function createHTML(data) {
+    let html = "";
+    for (i=0, i<data.length, i++){
+        html += "<p>" + data[i].name;  //adds a paragraph for each data object from the json file + outputs name of object: name acceses the name value in the object
+    }
+ajayxOutput.insertAdjacentElement("beforeend", html);
+}
+
+/*Manipulation 5: Add a page counter and show UI Manipulaton depending on it*/
+var pageCounter = 1;
+button1.addEventListener("click", function () {
+    pageCounter++;
+    if (pageCounter >2){
+        button1.style.backgroundColor="red";
+    }
+});
+
 
 
 
