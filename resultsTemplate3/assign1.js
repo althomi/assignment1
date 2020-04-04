@@ -4,7 +4,7 @@ let button1 = document.getElementById("button1");
 let button2 = document.getElementById("button2");
 let button3 = document.getElementById("button3");
 let button4 = document.getElementById("button4");
-
+let timeout;
 
 
 button1.addEventListener("click", function () {
@@ -33,36 +33,46 @@ button4.addEventListener("mouseout", function () {
     button4.style.color="white";
 })
 
-//DOM Manipulation2: Show Overlay by Interaction
+//DOM Manipulation2: Animation with Canvas inklusive settimeout
 
-
-
-function animate() {
+function animate1() {
     /*setTimeout(animate, 2000)*/
 
-    setTimeout(function () {
+    timeout = setInterval(function () {
         let canvas = document.getElementById("canvasNextEmployee");
         var canvasRect = canvas.getContext("2d");
-        canvasRect.beginPath();
-        canvasRect.rect(250, 200, 200, 200);
-        canvasRect.stroke();
-        canvasRect.font = "30px Franklin Gothik Demi Bold";
+        canvasRect.font = "200px Changa One,  cursive";
         canvasRect.fillStyle = "red";
-        canvasRect.fillText("I Need You!", 10, 50);
-        }, 2000)
-
+        canvasRect.fillText("I", 10, 180);
+        }, 1000)
 };
-animate();
+animate1();
+
+function animate2() {
+    /*setTimeout(animate, 2000)*/
+
+    timeout = setInterval(function () {
+        let canvas = document.getElementById("canvasNextEmployee");
+        var canvasRect = canvas.getContext("2d");
+        canvasRect.font = "200px Changa One,  cursive";
+        canvasRect.fillStyle = "red";
+        canvasRect.fillText( " NEED ", 100, 180);
+    }, 2000)
+};
+animate2();
+
+function animate3() {
+    timeout = setInterval(function () {
+        let canvas = document.getElementById("canvasNextEmployee");
+        var canvasRect = canvas.getContext("2d");
+        canvasRect.font = "200px Changa One,  cursive";
+        canvasRect.fillStyle = "red";
+        canvasRect.fillText( "YOU!", 640, 180);
+    }, 3000)
+};
+animate3();
 
 
-/*
-var start = 0;
-var end = 500;
-for (y = start; y < end; y++) {
-window.setTimeout(function () {
-    canvasRect.font = "30px Franklin Gothik Demi Bold";
-    canvasRect.fillStyle = "red";
-    canvasRect.fillText("I Need You!", 10, 50);
-};*/
+
 
 
