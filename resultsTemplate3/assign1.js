@@ -36,8 +36,6 @@ button4.addEventListener("mouseout", function () {
 //DOM Manipulation2: Animation with Canvas inklusive settimeout
 
 function animate1() {
-    /*setTimeout(animate, 2000)*/
-
     timeout = setInterval(function () {
         let canvas = document.getElementById("canvasNextEmployee");
         var canvasRect = canvas.getContext("2d");
@@ -49,7 +47,6 @@ function animate1() {
 animate1();
 
 function animate2() {
-    /*setTimeout(animate, 2000)*/
 
     timeout = setInterval(function () {
         let canvas = document.getElementById("canvasNextEmployee");
