@@ -34,6 +34,7 @@ button4.addEventListener("mouseout", function () {
 })
 
 //DOM Manipulation2: Animation with Canvas inklusive settimeout
+<<<<<<< Updated upstream
 
 function animate1() {
     /*setTimeout(animate, 2000)*/
@@ -51,6 +52,35 @@ animate1();
 function animate2() {
     /*setTimeout(animate, 2000)*/
 
+=======
+<<<<<<< HEAD
+
+function animate1() {
+=======
+
+function animate1() {
+    /*setTimeout(animate, 2000)*/
+
+>>>>>>> e3d91e7b06312ed63383dfab73aaa6d0e4d7535f
+    timeout = setInterval(function () {
+        let canvas = document.getElementById("canvasNextEmployee");
+        var canvasRect = canvas.getContext("2d");
+        canvasRect.font = "200px Changa One,  cursive";
+        canvasRect.fillStyle = "red";
+        canvasRect.fillText("I", 10, 180);
+        }, 1000)
+};
+animate1();
+
+<<<<<<< HEAD
+
+function animate2() {
+=======
+function animate2() {
+    /*setTimeout(animate, 2000)*/
+
+>>>>>>> e3d91e7b06312ed63383dfab73aaa6d0e4d7535f
+>>>>>>> Stashed changes
     timeout = setInterval(function () {
         let canvas = document.getElementById("canvasNextEmployee");
         var canvasRect = canvas.getContext("2d");
@@ -60,7 +90,15 @@ function animate2() {
     }, 2000)
 };
 animate2();
+<<<<<<< Updated upstream
 
+=======
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> e3d91e7b06312ed63383dfab73aaa6d0e4d7535f
+>>>>>>> Stashed changes
 function animate3() {
     timeout = setInterval(function () {
         let canvas = document.getElementById("canvasNextEmployee");
