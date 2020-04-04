@@ -37,8 +37,6 @@ button4.addEventListener("mouseout", function () {
 <<<<<<< Updated upstream
 
 function animate1() {
-    /*setTimeout(animate, 2000)*/
-
     timeout = setInterval(function () {
         let canvas = document.getElementById("canvasNextEmployee");
         var canvasRect = canvas.getContext("2d");
@@ -50,6 +48,7 @@ function animate1() {
 animate1();
 
 function animate2() {
+<<<<<<< Updated upstream
     /*setTimeout(animate, 2000)*/
 
 =======
@@ -80,6 +79,8 @@ function animate2() {
     /*setTimeout(animate, 2000)*/
 
 >>>>>>> e3d91e7b06312ed63383dfab73aaa6d0e4d7535f
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     timeout = setInterval(function () {
         let canvas = document.getElementById("canvasNextEmployee");
