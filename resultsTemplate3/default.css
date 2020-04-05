@@ -516,7 +516,7 @@ ul.style3 .first {
 /* Button Style                                                                  */
 /*********************************************************************************/
 
-	.button
+
 	{
 		display: inline-block;
 		margin-top: 2em;
@@ -572,13 +572,5 @@ ul.style3 .first {
 	}
  #canvasNextEmployee{
 	 position: absolute;
-<<<<<<< Updated upstream
 	 top: 250px;
-=======
-<<<<<<< HEAD
-	 top: 200px;
-=======
-	 top: 250px;
->>>>>>> e3d91e7b06312ed63383dfab73aaa6d0e4d7535f
->>>>>>> Stashed changes
  }
