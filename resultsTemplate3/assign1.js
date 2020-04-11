@@ -34,47 +34,37 @@ button4.addEventListener("mouseout", function () {
 })
 
 //DOM Manipulation2: Animation with Canvas inklusive settimeout
+function drawCanvas(text, xPos, yPos) {
+       let canvas = document.getElementById("canvasNextEmployee");
+       var canvasRect = canvas.getContext("2d");
+       canvasRect.font = "200px Changa One";
+       canvasRect.fillStyle = "red";
+       canvasRect.fillText(text, xPos, yPos);
+    }
 
-function animate1() {
-    timeout = setInterval(function () {
-        let canvas = document.getElementById("canvasNextEmployee");
-        var canvasRect = canvas.getContext("2d");
-        canvasRect.font = "200px Changa One,  cursive";
-        canvasRect.fillStyle = "red";
-        canvasRect.fillText("I", 10, 180);
-        }, 1000)
+    function animate1(text, xPos, yPos) {
+    timeout = setTimeout(function () {
+         drawCanvas("I", 10, 180)
+    }, 1000)};
 
-};
 animate1();
 
-
-function animate2() {
-
-    timeout = setInterval(function () {
-        let canvas = document.getElementById("canvasNextEmployee");
-        var canvasRect = canvas.getContext("2d");
-        canvasRect.font = "200px Changa One,  cursive";
-        canvasRect.fillStyle = "red";
-        canvasRect.fillText( " NEED ", 100, 180);
-    }, 2000)
-};
+function animate2(text, xPos, yPos) {
+    timeout = setTimeout(function () {
+        drawCanvas("NEED", 120, 180)
+    }, 2000)};
 animate2();
 
-function animate3() {
-    timeout = setInterval(function () {
-        let canvas = document.getElementById("canvasNextEmployee");
-        var canvasRect = canvas.getContext("2d");
-        canvasRect.font = "200px Changa One,  cursive";
-        canvasRect.fillStyle = "red";
-        canvasRect.fillText( "YOU!", 640, 180);
-    }, 3000)
-};
+function animate3(text, xPos, yPos) {
+    timeout = setTimeout(function () {
+        drawCanvas("YOU", 640, 180)
+    }, 3000)};
 animate3();
 
 
 /*3 Manipulation with AJAX: fetching data from server*/
     var ajax = new XMLHttpRequest();
-    ajax.open('GET', 'https://github.com/LearnWebCode/json-example/blob/master/animals-1.json');
+    ajax.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
     ajax.onload = function(){
         console.log(ajax.responseText);
     };
@@ -86,7 +76,7 @@ animate3();
 var ajayxOutput = document.getElementById("ajax");
 var ajaxButton = document.getElementById("button4");
 ajaxButton.addEventListener("click", function httprequest() {
-    ajax.open('GET', 'https://github.com/LearnWebCode/json-example/blob/master/animals-1.json');
+    ajax.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
     ajax.onload = function(){
         var mydata = JSON.parse(ajax.responseText);
         createHTML(mydata)
