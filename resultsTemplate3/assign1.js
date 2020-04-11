@@ -43,8 +43,10 @@ function animate1() {
         canvasRect.fillStyle = "red";
         canvasRect.fillText("I", 10, 180);
         }, 1000)
+
 };
 animate1();
+
 
 function animate2() {
 
@@ -95,7 +97,7 @@ ajaxButton.addEventListener("click", function httprequest() {
 
 function createHTML(data) {
     let html = "";
-    for (i=0, i<data.length, i++){
+    for (i=0; i<data.length; i++){
         html += "<p>" + data[i].name;  //adds a paragraph for each data object from the json file + outputs name of object: name acceses the name value in the object
     }
 ajayxOutput.insertAdjacentElement("beforeend", html);
