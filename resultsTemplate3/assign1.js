@@ -74,7 +74,7 @@ animate3();
 /*4 Manipulation with AJAX: printing data to the web page from other server*/
 
 var ajaxOutput = document.getElementById("ajax");
-var ajaxButton = document.getElementById("button3");
+var ajaxButton = document.getElementById("button3d");
 ajaxButton.addEventListener("click", function httprequest(event) {
     event.preventDefault();
     ajax.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
@@ -94,7 +94,7 @@ function createHTML(data) {
     ajaxOutput.insertAdjacentHTML("beforeend", html);
 }
 
-/*Manipulation 5: Add a page counter and show UI Manipulaton depending on it*/
+/*Manipulation 5: Add a click counter and show UI Manipulaton depending on it*/
 var pageCounter = 1;
 button1.addEventListener("click", function () {
     pageCounter++;
